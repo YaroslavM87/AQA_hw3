@@ -12,8 +12,8 @@ public class AppOrderTest {
         SelenideElement testContent = $("form");
         testContent.$("input.input__control[type=text]").setValue("Ярослав");
         testContent.$("input.input__control[type=tel]").setValue("+00123456789");
-        testContent.$x("/html/body/div/div/form/div[3]/label").click();
-        testContent.$x("/html/body/div/div/form/div[4]/button/span/span").click();
+        testContent.$(".checkbox").click();
+        testContent.$(".button__text").click();
         $("[data-test-id=order-success]").should(have(text("успешно")));
     }
 }
